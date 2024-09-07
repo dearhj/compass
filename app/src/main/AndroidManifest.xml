@@ -16,6 +16,7 @@
         <activity
             android:name=".TypeTwoActivity"
             android:screenOrientation="portrait"
+            android:launchMode="singleTask"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +26,7 @@
         </activity>
         <activity
             android:name=".TypeOneActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:exported="true">
         </activity>
