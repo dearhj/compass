@@ -5,23 +5,33 @@ plugins {
 
 android {
     namespace = "com.android.testdemo"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.android.testdemo"
-        minSdk = 24
-        targetSdk = 33
+        minSdk = 26
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }
 
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("D:\\Android12SignerGUI\\SignFiles\\OC195\\platform.jks")
+            keyAlias = "android"
+            keyPassword = "android"
+            storePassword = "android"
+        }
+    }
     buildTypes {
+        debug {
+            isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
+        }
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {

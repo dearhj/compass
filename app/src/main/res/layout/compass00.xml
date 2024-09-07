@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A3FBC7">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="30dp"
+                android:gravity="center"
+                android:text="基于方向传感器"
+                android:textColor="#009688"
+                android:textSize="26dp" />
+
+            <ImageView
+                android:id="@+id/compass"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:layout_below="@+id/title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/aa" />
+
+            <TextView
+                android:id="@+id/value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/compass"
+                android:layout_alignLeft="@+id/compass"
+                android:layout_alignRight="@+id/compass"
+                android:layout_marginTop="30dp"
+                android:text="方向传感器的返回值："
+                android:textColor="#FFC107"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/value01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/value"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="方位"
+                android:textColor="@color/black"
+                android:textSize="38dp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/value01"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="切换到磁力传感器和重力传感器" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

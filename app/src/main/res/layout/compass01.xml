@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A3FBC7">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="基于加速度计和磁场传感器"
+                android:textColor="#009688"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:gravity="center"
+                android:text="请将设备平放于水平面上"
+                android:textColor="#009688"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:id="@+id/compass"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:layout_below="@+id/title"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/aa" />
+
+            <TextView
+                android:id="@+id/value00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/compass"
+                android:layout_alignLeft="@+id/compass"
+                android:layout_alignRight="@+id/compass"
+                android:layout_marginTop="10dp"
+                android:text="加速度计的返回值："
+                android:textColor="#FFC107"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/value01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/value00"
+                android:layout_alignLeft="@+id/compass"
+                android:layout_alignRight="@+id/compass"
+                android:layout_marginTop="10dp"
+                android:text="磁场传感器的返回值："
+                android:textColor="#FFC107"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/value02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/value01"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="方位"
+                android:textColor="@color/black"
+                android:textSize="38dp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/value02"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="切换到方向传感器" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
